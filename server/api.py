@@ -112,8 +112,16 @@ def get_session():
     data = request.get_data()
     data_json = json.loads(data)
     session_id = data_json['session_id']
-    
     session = session_manager.get_session(session_id)
+
+    if not session:
+        logging.info("ACTIVE_SESSION:")
+        logging.info(session_manager.active_sessions)
+
+        msg = "No session to continue..."
+        logging.error(msg)
+        return json_response({'response': msg})
+
     if session['status'] == "GOT_ENCR_DATA":
         session = session_manager.change_status(session_id, "FINALIZED")
 

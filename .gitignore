@@ -1,5 +1,4 @@
 .idea/
 .vscode/
+python3/
 venv/
-/*.sh
-__pycache__/

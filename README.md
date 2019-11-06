@@ -1,6 +1,6 @@
 # Decode Session Manager
 
-This Session Manager is part of the Decode Amsterdam project. For more info check out the [Decode Amsterdam](https://github.com/Amsterdam/decode_amsterdam_pwa) repository.
+This Session Manager is part of the Decode Amsterdam project. For more info check out the [Decode Amsterdam](https://github.com/Amsterdam/decode_passport_scanner) repository.
 
 ## Project Setup
 
@@ -18,6 +18,7 @@ $ source venv/bin/activate
 
 Within this environment you can now setup the needed libraries:
 ```
+$ cd server
 $ pip install -r requirements.txt
 ```
 

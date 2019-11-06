@@ -23,7 +23,8 @@ def get_session(session_id):
             else:
                 return session
 
-    return "Session not found"
+    logging.error("Session not found")
+    return None
 
 
 def get_session_status(session_id):
